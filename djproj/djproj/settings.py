@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)0kf(jkw)0br=1(f#-fj)a*mpm^o_ftez#vbhj6n-+g6t1xmjn'
+SECRET_KEY = 'django-insecure-f)cddo9b+#iothkwpcqv#j40loa^3cv=j6f5v8w&(7f*_y%(+y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'djapp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,11 +51,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'djproj.urls'
+import os
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,11 +77,10 @@ WSGI_APPLICATION = 'djproj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangoproj',
-        'USER': "root",
-        'PASSWORD': ""
-        
+        'USER' : 'root',
+        'PASSWORD' : '12345'
     }
 }
 
