@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangoproj',
         'USER' : 'root',
-        'PASSWORD' : '12345'
+        'PASSWORD' : ''
     }
 }
 
