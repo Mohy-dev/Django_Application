@@ -53,10 +53,11 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'djproj.urls'
 import os
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [r'C:\Users\mohya\Desktop\Django\djproj\djproj\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
