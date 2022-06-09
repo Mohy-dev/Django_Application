@@ -58,7 +58,7 @@ ROOT_URLCONF = 'djproj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r"C:\Users\mohya\Desktop\Django\templates"],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangoproj',
         'USER': 'root',
-        'PASSWORD': '12345'
+        'PASSWORD': ''
     }
 }
 
