@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'djapp',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,13 +53,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'djproj.urls'
-import os
 
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [r"C:\Users\mohya\Desktop\Django\templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangoproj',
-        'USER' : 'root',
-        'PASSWORD' : ''
+        'USER': 'root',
+        'PASSWORD': '12345'
     }
 }
 
@@ -122,7 +123,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = os.path.join(BASE_DIR, 'djapp/static/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
